@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.fleur-de-leah-regular {
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+
+    background-color: #121212;
+    color: #f0f0f0;
+    line-height: 1.6;
+    
+}
+header{
+    background-color: #000000;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff6b6b;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h2{
+    color: #ff6b6b;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover{
+    color: #ff6b6b;
+}
+
+section, main{
+    padding: 80px 20px 40px 20px;
+    text-align: center;
+}
+
+.Home{
+    height: 100vh;
+    background: url(/Python/HTML/PaginaOrdinario/Img/Imagen-Vinilo.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home h1{
+    font-family: "Fleur De Leah", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.Home p{
+    font-family: "Fleur De Leah", cursive;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
