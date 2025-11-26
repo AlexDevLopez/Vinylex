@@ -69,6 +69,7 @@ section, main{
 .Home{
     height: 100vh;
     background: url(/Img/Imagen-Vinilo.jpg);
+    background: url(../Img/Imagen-Vinilo.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -166,4 +167,89 @@ input:focus, select:focus{
     background-color: #ff6b6b;
     color: #000;
     box-shadow: 0 0 5px #ff6b6b, 0 0 5px #ff6b6b;
+}
+.cuadricula{
+    display: flex;
+    padding: 20px 0;
+    flex-flow: row wrap;
+    gap: 50px;
+    justify-content: space-around;
+}
+
+.card{
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    transition: tranform 0.5 ease;
+    text-align: center;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    border-color: #ff6b6b;
+}
+
+.card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.card h4{
+    font-size: 1.2Rem;
+    margin-bottom: 5px;
+}
+
+.genero{
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.Costo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.precio{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.botonvinil{
+    background-color: #ff6b6b;
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.botonvinil:hover{
+    background-color: #fff;
+}
+
+.btpag{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.btpagpro{
+    background-color: #ff6b6b;
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
 }
