@@ -100,7 +100,7 @@ section, main{
     font-size: 1.8rem;
     margin-bottom: 20px;
 }
-/* FORMULARIO REGISTRO*/
+/* FORMULARIO REGISTRO */
 #Registro{
     background-color: #1a1a1a;
 }
@@ -295,30 +295,30 @@ input:focus, select:focus{
 
 }
 
-/* --- LAYOUT DE TIENDA CORREGIDO --- */
+/* LAYOUT DE TIENDA */
 
-/* 1. El Contenedor Padre (Obliga a estar lado a lado) */
+/* Cuadrícula */
 .tienda-layout {
-    display: flex;             /* Activa el modo fila */
-    align-items: flex-start;   /* Alinea todo arriba */
-    gap: 30px;                 /* Espacio entre barra y productos */
+    display: flex;             
+    align-items: flex-start;   
+    gap: 30px;                 
     max-width: 95%;
-    margin: 0 auto;            /* Centra todo en la pantalla */
+    margin: 0 auto;            
     padding: 0 20px;
     max-width: 1800px;
 }
 
-/* Columna Izquierda (Filtros) */
+/* Columna Izquierda */
 .columna-filtros {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea el botón y la barra a la izquierda */
+    align-items: flex-start; 
 }
 
-/* 2. El Botón de Filtros (Ahora alineado a la izquierda) */
+/* 2. FIltros */
 .btn-toggle {
     display: inline-block;
-    margin: 20px 0 20px 0; /* Espacio arriba y abajo */
+    margin: 20px 0 20px 0; 
     background-color: transparent;
     color: #ff6b6b;
     border: 1px solid #ff6b6b;
@@ -335,33 +335,33 @@ input:focus, select:focus{
     color: black;
 }
 
-/* 3. La Barra Lateral (Sidebar) */
+/* Sidebar */
 .sidebar {
     width: 220px;           /* Oculta por defecto */
-    opacity: 0;         /* Invisible */
+    opacity: 0;         
     overflow: hidden;   
-    transition: all 0.5s ease; /* Animación suave */
-    background: transparent;   /* Sin fondo feo */
+    transition: all 0.5s ease; 
+    background: transparent;   
 }
 
-/* Estado ABIERTO del sidebar */
+/* Sidebar abierto */
 .sidebar.abierto {
     width: 250px;       /* Ancho fijo */
-    opacity: 1;         /* Visible */
-    min-width: 250px;   /* Evita que se aplaste */
+    opacity: 1;         
+    min-width: 250px;   
     border-right: 1px solid #333;
     padding-right: 20px;
 }
 
-/* 4. Estilo de los BOTONES DEL MENÚ (Adiós cajas blancas) */
+/* BOTONES DEL MENÚ  */
 .sidebar-contenido button.btn-filtro {
-    display: block;        /* Ocupa toda la línea */
+    display: block;        
     width: 100%;           
     padding: 12px;
     margin-bottom: 8px;
-    background-color: #111; /* NEGRO (No blanco) */
-    color: #fff;            /* Texto blanco */
-    border: 1px solid #333; /* Borde sutil */
+    background-color: #111; 
+    color: #fff;            
+    border: 1px solid #333;
     text-align: left;       
     cursor: pointer;
     border-radius: 5px;
@@ -370,13 +370,13 @@ input:focus, select:focus{
 
 .sidebar-contenido button.btn-filtro:hover,
 .sidebar-contenido button.btn-filtro.activo {
-    background-color: #ff6b6b; /* Rojo al pasar mouse */
+    background-color: #ff6b6b; 
     color: black;
     border-color: #ff6b6b;
-    padding-left: 20px;     /* Efecto de movimiento */
+    padding-left: 20px;     
 }
 
-/* 5. Títulos del sidebar */
+
 .sidebar h4 {
     color: #ff6b6b;
     margin-bottom: 15px;
@@ -385,7 +385,7 @@ input:focus, select:focus{
     letter-spacing: 1px;
 }
 
-/* ESTILOS DEL SELECTOR DE ORDEN */
+/* Selector */
 .orden-container {
     margin-bottom: 20px;
     width: 100%;
@@ -394,10 +394,9 @@ input:focus, select:focus{
 .select-orden {
     width: 100%;
     padding: 10px;
-    background-color: #1a1a1a; /* Fondo oscuro */
-    color: white;              /* Texto blanco */
-    border: 1px solid #ff6b6b; /* Borde neón */
-    border-radius: 5px;
+    background-color: #1a1a1a; 
+    color: white;              
+    border: 1px solid #ff6b6b;    border-radius: 5px;
     outline: none;
     cursor: pointer;
     font-size: 1rem;
@@ -407,12 +406,12 @@ input:focus, select:focus{
     background-color: #1a1a1a;
 }
 
-/* --- ESTILOS DEL CARRUSEL (SWIPER) --- */
+/* Carrusel */
 .swiper {
     width: 90%;  
-    margin: 0 auto;        /* Que ocupe casi todo el ancho */
-    height: 450px;       /* Altura fija del carrusel */
-    border-radius: 15px; /* Bordes redondeados */
+    margin: 0 auto;  
+    height: 450px;       
+    border-radius: 15px; 
     border: 2px solid #333;
     max-width: 1200px;
 }
@@ -421,10 +420,10 @@ input:focus, select:focus{
     text-align: center;
     font-size: 18px;
     background: #000;
-    display: flex;       /* Para centrar contenido */
+    display: flex;       
     justify-content: center;
     align-items: center;
-    position: relative;  /* Para poner texto encima */
+    position: relative;  
     overflow: hidden;
 }
 
@@ -433,13 +432,13 @@ input:focus, select:focus{
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;   /* Que la imagen cubra todo sin deformarse */
+    object-fit: cover;   
     opacity: 0.6; 
     opacity: 0.5;
-    z-index: 1;      /* Un poco oscura para leer el texto */
+    z-index: 1;  
 }
 
-/* Texto flotante encima de la imagen */
+/* Texto en Carrusel */
 .slide-content {
     position: relative;
     z-index: 100;
@@ -463,7 +462,7 @@ input:focus, select:focus{
     font-family: "Fleur De Leah", cursive;
 }
 
-/* Color de las flechas del slider */
+/* Flechas Carrusel */
 .swiper-button-next, .swiper-button-prev {
     color: #ff6b6b !important;
 }
@@ -485,12 +484,10 @@ input:focus, select:focus{
     padding-bottom: 50px;
 }
 
-/* --- ESTILOS DE LA GALERÍA (MOSAICO) --- */
+/* Galería */
 .galeria-grid {
     display: grid;
-    /* Crea columnas automáticas de mínimo 250px */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* Altura automática de filas para el efecto mosaico */
     grid-auto-rows: 250px; 
     gap: 15px;
     max-width: 1200px;
@@ -499,7 +496,7 @@ input:focus, select:focus{
 }
 
 .foto-item {
-    position: relative; /* Para el texto flotante */
+    position: relative; 
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
@@ -508,28 +505,27 @@ input:focus, select:focus{
 .foto-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Llena el cuadro sin deformarse */
+    object-fit: cover; 
     transition: transform 0.5s ease;
 }
 
-/* Efecto al pasar el mouse (Zoom) */
+/* Hover Galería */
 .foto-item:hover img {
     transform: scale(1.1);
 }
 
-/* --- CLASES ESPECIALES PARA TAMAÑOS --- */
+/* TAMAÑOS FOTOS */
 
-/* Ocupa 2 espacios hacia abajo (Foto alta) */
+
 .vertical {
     grid-row: span 2; 
 }
 
-/* Ocupa 2 espacios hacia los lados (Foto ancha) */
 .horizontal {
     grid-column: span 2; 
 }
 
-/* --- TEXTO QUE APARECE AL PASAR EL MOUSE --- */
+/* GALERÍA OVERLAY */
 .overlay {
     position: absolute;
     top: 0;
@@ -540,12 +536,12 @@ input:focus, select:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Invisible al inicio */
+    opacity: 0; 
     transition: opacity 0.3s ease;
 }
 
 .foto-item:hover .overlay {
-    opacity: 1; /* Visible al pasar el mouse */
+    opacity: 1; 
 }
 
 .overlay p {
@@ -555,10 +551,10 @@ input:focus, select:focus{
     font-weight: bold;
 }
 
-/* Ajuste Responsivo para celulares: Todo en 1 columna */
+/* Responsivo */
 @media (max-width: 600px) {
     .horizontal {
-        grid-column: span 1; /* En celular, que no ocupe 2 espacios */
+        grid-column: span 1;
     }
 }
 
@@ -574,20 +570,19 @@ input:focus, select:focus{
     padding-bottom: 50px;
 }
 
-/* --- FOOTER PROFESIONAL --- */
+/* FOOTER  */
 footer {
     background-color: #050505; /* Casi negro absoluto */
     color: #fff;
     padding: 60px 20px 20px; /* Espacio arriba y abajo */
     border-top: 4px solid #ff6b6b; /* Borde neón arriba */
-    margin-top: auto; /* Empuja el footer al fondo si hay poco contenido */
+    margin-top: auto; 
 }
 
 .footer-contenedor {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    /* 3 Columnas que se ajustan solas */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
     margin-bottom: 40px;
@@ -630,7 +625,7 @@ footer {
 
 .footer-links a:hover {
     color: #ff6b6b;
-    padding-left: 5px; /* Pequeño movimiento al pasar el mouse */
+    padding-left: 5px; 
 }
 
 /* Redes Sociales */
@@ -667,7 +662,7 @@ footer {
     font-size: 0.8rem;
 }
 
-/* --- ESTILOS DEL CARRITO --- */
+/*  Carritos */
 .carrito-contenedor {
     display: flex;
     flex-wrap: wrap; /* Para que en celular baje */
@@ -677,9 +672,9 @@ footer {
     padding: 0 20px;
 }
 
-/* Lista de productos (Izquierda) */
+/* Lista de Productos */
 .carrito-lista {
-    flex: 2; /* Ocupa el 66% del ancho */
+    flex: 2;
     background: transparent;
 }
 
@@ -735,9 +730,9 @@ footer {
     color: white;
 }
 
-/* Resumen (Derecha) */
+/* Resumen de Compras */
 .carrito-resumen {
-    flex: 1; /* Ocupa el 33% del ancho */
+    flex: 1;
     background: #111;
     padding: 30px;
     border-radius: 10px;
@@ -762,7 +757,7 @@ footer {
     margin-top: 10px;
 }
 
-/* Botón Seguir Comprando */
+/* Seguir con la compra */
 .boton-seguir {
     width: 100%;
     margin-top: 10px;
@@ -777,23 +772,23 @@ footer {
     color: white;
 }
 
-/* --- ESTILOS DE CONTACTO --- */
+/* /CONTACTO */
 .contacto-layout {
     display: flex;
-    flex-wrap: wrap; /* Para que en celular se ponga uno abajo del otro */
+    flex-wrap: wrap;
     gap: 50px;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Columna Izquierda y Derecha ocupan 50% cada una */
+
 .contacto-form, .contacto-info {
     flex: 1;
-    min-width: 300px; /* Evita que se aplasten mucho */
+    min-width: 300px; 
 }
 
-/* Estilo para el área de texto (Mensaje) */
+/* Texto Autor*/
 textarea {
     width: 100%;
     padding: 10px;
@@ -810,7 +805,6 @@ textarea:focus {
     border-color: #ff6b6b;
 }
 
-/* Estilos de la info de la derecha */
 .info-item {
     margin-bottom: 30px;
     border-left: 3px solid #ff6b6b; /* Línea decorativa al lado */
@@ -833,7 +827,7 @@ textarea:focus {
     border-radius: 10px;
     overflow: hidden; /* Recorta las esquinas del mapa */
     margin-top: 20px;
-    filter: grayscale(100%) invert(90%); /* TRUCO PRO: Hace el mapa oscuro */
+    filter: grayscale(100%) invert(90%);
 }
 
 /* Al pasar el mouse, el mapa recupera su color */
@@ -842,7 +836,7 @@ textarea:focus {
     transition: 0.5s;
 }
 
-/* --- ESTILOS PÁGINA DE AUTOR --- */
+/* AUTOR */
 .autor-card {
     background-color: #1a1a1a;
     border: 2px solid #333;
@@ -918,7 +912,6 @@ textarea:focus {
     color: #000;
 }
 
-/* Responsivo para celular: Foto arriba, texto abajo */
 @media (max-width: 768px) {
     .autor-card {
         flex-direction: column;
@@ -931,6 +924,6 @@ textarea:focus {
     }
 
     .datos-escolares {
-        text-align: left; /* Los datos se ven mejor alineados a la izq */
+        text-align: left; 
     }
 }
