@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinylex</title>
+    <link rel="stylesheet" href="Css/Estilos.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h2>VinylStore</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="carrito.html" class="activo" style="color:#ff6b6b;">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding-top: 150px; padding-bottom: 50px;">
+        
+        <h3 style="text-align: center; font-family: 'Fleur De Leah', cursive; font-size: 4rem; margin-bottom: 30px; color: #ff6b6b;">
+            Tu Pedido
+        </h3>
+
+        <div class="carrito-contenedor">
+            
+            <div class="carrito-lista" id="lista-productos">
+                
+                <div class="item-carrito">
+                    <img src="https://m.media-amazon.com/images/I/61MWIe1BzwL._AC_SX385_.jpg" alt="Disco">
+                    <div class="item-info">
+                        <h4>DAMN - Kendrick Lamar</h4>
+                        <p class="genero">Hip Hop</p>
+                        <p class="precio-item">$1445.00</p>
+                    </div>
+                    <button class="btn-eliminar">Eliminar</button>
+                </div>
+
+                <div class="item-carrito">
+                    <img src="https://m.media-amazon.com/images/I/61EhflTm0YL._AC_SX342_.jpg" alt="Disco">
+                    <div class="item-info">
+                        <h4>Utopia - Travis Scott</h4>
+                        <p class="genero">Trap</p>
+                        <p class="precio-item">$1015.00</p>
+                    </div>
+                    <button class="btn-eliminar">Eliminar</button>
+                </div>
+
+            </div>
+
+            <div class="carrito-resumen">
+                <h4 style="margin-bottom: 20px; font-size: 1.5rem; color: #fff;">Resumen</h4>
+                
+                <div class="resumen-fila">
+                    <span>Subtotal</span>
+                    <span id="subtotal-amount">$0.00</span>
+                </div>
+                <div class="resumen-fila">
+                    <span>Envío Estimado</span>
+                    <span>$150.00</span>
+                </div>
+                
+                <div class="resumen-fila total">
+                    <span>Total</span>
+                    <span id="total-amount">$0.00</span>
+                </div>
+
+                <button class="botonvinil" style="width: 100%; margin-top: 20px; border-radius: 5px;">Proceder al Pago</button>
+                <button class="boton-seguir" onclick="window.location.href='productos.html'">Seguir Comprando</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+    <div class="footer-contenedor">
+        
+        <div class="footer-col">
+            <h3>Vinylex</h3>
+            <p>Sumergete en un mundo lleno de sensaciones. El mejor formato para disfrutar de tus éxitos favoritos.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Explora</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo Completo</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="registro.html">Únete al Club</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <a href="#">FB</a> 
+                <a href="#">IG</a>
+                <a href="#">TW</a>
+                <a href="#">YT</a>
+            </div>
+            <p style="margin-top: 20px;">info@vinylex.com</p>
+            <p>Puebla de Zaragoza, Universidad del Valle de Puebla</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Vinylex. Todos los derechos reservados.</p>
+        <p>Diseñado por <a href="autor.html" style="color: #ff6b6b;">Alexander</a></p>
+    </div>
+</footer>
+
+
+    <script>
+        // 1. Seleccionamos todos los botones de eliminar
+        const botonesEliminar = document.querySelectorAll('.btn-eliminar');
+        const envio = 150.00; // Costo fijo de envío
+
+        // 2. Función para recalcular el total
+        function actualizarTotal() {
+            let subtotal = 0;
+            // Busca todos los elementos que tengan precio
+            const precios = document.querySelectorAll('.precio-item');
+            
+            precios.forEach(elemento => {
+                // Quitamos el signo $ y convertimos a número
+                const valor = parseFloat(elemento.innerText.replace('$', '').replace(',', ''));
+                subtotal += valor;
+            });
+
+            // Escribimos los resultados en la pantalla
+            document.getElementById('subtotal-amount').innerText = '$' + subtotal.toFixed(2);
+            document.getElementById('total-amount').innerText = '$' + (subtotal + envio).toFixed(2);
+        }
+
+        // 3. Dar vida a los botones de eliminar
+        botonesEliminar.forEach(boton => {
+            boton.addEventListener('click', function(e) {
+                // Confirmación simple
+                if(confirm('¿Seguro que quieres eliminar este disco?')) {
+                    // Borra el div "item-carrito" completo
+                    e.target.parentElement.remove();
+                    // Vuelve a sumar todo
+                    actualizarTotal();
+                }
+            });
+        });
+
+        // 4. Ejecutar la suma al cargar la página por primera vez
+        actualizarTotal();
+    </script>
+</body>
+</html>

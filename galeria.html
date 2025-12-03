@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VinyLex</title>
+    <link rel="stylesheet" href="Css/Estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <header id="Inicio">
+        <nav>
+            <h2>Vinylex</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#Vendido">Hot sale</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <section id="galeria" style="padding-top: 120px; padding-bottom: 50px;">
+        
+        <h3 style="text-align: center; font-size: 5rem; margin-bottom: 10px; font-family: 'Fleur De Leah', cursive; color: #ff6b6b;">
+            Nuestra Galería
+        </h3>
+        <p style="text-align: center; margin-bottom: 40px; color: #888;">El arte detrás de la música.</p>
+
+        <div class="galeria-grid">
+            
+            <div class="foto-item vertical">
+                <img src="Img/Galeria/Tocadiscos.jpg" alt="Tocadiscos">
+                <div class="overlay">
+                    <p>El sonido clásico</p>
+                </div>
+            </div>
+
+            <div class="foto-item">
+                <img src="Img/Galeria/Unica.jpg" alt="Colección">
+                <div class="overlay">
+                    <p>Colecciones únicas</p>
+                </div>
+            </div>
+
+            <div class="foto-item horizontal">
+                <img src="Img/Galeria/Vinil.jpg" alt="Vinilo Color">
+                <div class="overlay">
+                    <p>Ediciones Limitadas</p>
+                </div>
+            </div>
+
+            <div class="foto-item">
+                <img src="Img/Galeria/Music1.jpg" alt="Audífonos">
+                <div class="overlay">
+                    <p>Sumérgete</p>
+                </div>
+            </div>
+
+            <div class="foto-item vertical">
+                <img src="https://images.unsplash.com/photo-1542208998-f6dbbb27a72f?q=80&w=800&auto=format&fit=crop" alt="Tienda">
+                <div class="overlay">
+                    <p>Visítanos</p>
+                </div>
+            </div>
+
+            <div class="foto-item">
+                <img src="Img/Galeria/VintageRetro.jpg" alt="Neon">
+                <div class="overlay">
+                    <p>Vibra Retro</p>
+                </div>
+            </div>
+
+            <div class="foto-item horizontal">
+                <img src="Img/Galeria/Sentir.jpg" alt="Tacto">
+                <div class="overlay">
+                    <p>Nuevas sensaciones</p>
+                </div>
+            </div>
+
+            <div class="foto-item">
+                <img src="Img/Galeria/Guitar.jpg" alt="Guitar">
+                <div class="overlay">
+                    <p>Crea</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-contenedor">
+        
+        <div class="footer-col">
+            <h3>Vinylex</h3>
+            <p>Sumergete en un mundo lleno de sensaciones. El mejor formato para disfrutar de tus éxitos favoritos.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Explora</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo Completo</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="registro.html">Únete al Club</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <a href="#">FB</a> 
+                <a href="#">IG</a>
+                <a href="#">TW</a>
+                <a href="#">YT</a>
+            </div>
+            <p style="margin-top: 20px;">info@vinylex.com</p>
+            <p>Puebla de Zaragoza, Universidad del Valle de Puebla</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Vinylex. Todos los derechos reservados.</p>
+        <p>Diseñado por <a href="autor.html" style="color: #ff6b6b;">Alexander</a></p>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3500,        /* Cambia cada 3.5 segundos */
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true, /* Hace que gire infinitamente */
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - VinylStore</title>
+    <link rel="stylesheet" href="Css/Estilos.css">
+</head>
+<body>
+
+    <header id="Inicio">
+        <nav>
+            <h2>Vinylex</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#Vendido">Hot sale</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="productos">
+            <h3 style="text-align: center; font-size: 5rem; margin-bottom: 30px; color: #ff6b6b;">Nuestro Catálogo</h3>
+
+            <div class="tienda-layout">
+
+                <div class="columna-filtros">
+                    <button id="btn-toggle-filtros" class="btn-toggle">☰ Filtros</button>
+
+                    <div class="orden-container">
+                        <label for="ordenar" style="color: #ff6b6b; font-weight: bold; margin-bottom: 5px; display: block;">Ordenar por:</label>
+                        <select id="ordenar" class="select-orden">
+                            <option value="defecto">Relevancia</option>
+                            <option value="az">Nombre (A-Z)</option>
+                            <option value="za">Nombre (Z-A)</option>
+                            <option value="precio-bajo">Precio (Bajo a Alto)</option>
+                            <option value="precio-alto">Precio (Alto a Bajo)</option>
+                        </select>
+                    </div>
+                    
+                    <aside id="sidebar-filtros" class="sidebar abierto">
+                        <div class="sidebar-contenido">
+                            <h4>Géneros</h4>
+                            <button class="btn-filtro activo" data-filter="todos">Todos</button>
+                            <button class="btn-filtro" data-filter="hiphop">Hip Hop</button>
+                            <button class="btn-filtro" data-filter="trap">Trap</button>
+                            <button class="btn-filtro" data-filter="jazzrap">Jazz Rap</button>
+                            <button class="btn-filtro" data-filter="pop">Pop</button>
+                            <button class="btn-filtro" data-filter="urbano">Urbano</button>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="cuadricula">
+                    
+                    <div class="card" data-category="hiphop">
+                        <img src="https://m.media-amazon.com/images/I/61MWIe1BzwL._AC_SX385_.jpg" alt="DAMN">
+                        <h4>DAMN - Kendrick Lamar</h4>
+                        <p class="genero">Hip Hop</p>
+                        <div class="Costo">
+                            <span class="precio">$1445.00</span>
+                            <a href="carrito.html">
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="trap">
+                        <img src="https://m.media-amazon.com/images/I/61EhflTm0YL._AC_SX342_.jpg" alt="Utopia">
+                        <h4>Utopia - Travis Scott</h4>
+                        <p class="genero">Trap</p>
+                        <div class="Costo">
+                            <span class="precio">$1015.00</span>
+                            <a href="carrito.html">
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="hiphop">
+                        <img src="https://m.media-amazon.com/images/I/81MJUW7iUaL._AC_SX342_.jpg" alt="Igor">
+                        <h4>Igor - Tyler, the creator</h4>
+                        <p class="genero">Hip Hop</p>
+                        <div class="Costo">
+                            <span class="precio">$650.00</span>
+                            <a href="carrito.html">
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="jazzrap">
+                        <img src="https://m.media-amazon.com/images/I/81EISNNYwAL._AC_SX342_.jpg" alt="TPAB">
+                        <h4>To Pimp A Butterfly - Kendric</h4>
+                        <p class="genero">Jazz Rap</p>
+                        <div class="Costo">
+                            <span class="precio">$800.00</span>
+                            <a href="carrito.html">
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </a>
+                        </div>
+                    </div>
+                    
+                        <div class="card" data-category="trap">
+                            <img src="https://m.media-amazon.com/images/I/71wXF2NuHnL._AC_SL1500_.jpg" alt="?">
+                            <h4>? - XXXTENTACION</h4>
+                            <p class="genero">Hip Hop, Rap, Trap</p>
+                            <div class="Costo">
+                                <span class="precio">$600.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="https://m.media-amazon.com/images/I/81nFF-rXdRL._AC_SX342_SY445_QL70_ML2_.jpg" alt="Astroworld">
+                            <h4>Astroworld - Travis Scott</h4>
+                            <p class="genero">Hip Hop</p>
+                            <div class="Costo">
+                                <span class="precio">$750.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="https://m.media-amazon.com/images/I/81cM6bcW9vL._AC_SX385_.jpg" alt="The MB">
+                            <h4>The Melodic Blue - Baby Keem</h4>
+                            <p class="genero">Hip Hop</p>
+                            <div class="Costo">
+                                <span class="precio">$600.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="corridos">
+                            <img src="Img/Covers/PP1.jpg" alt="Génesis - Peso Pluma">
+                            <h4>Génesis - Peso Pluma</h4>
+                            <p class="genero">Corridos Tumbados</p>
+                            <div class="Costo">
+                                <span class="precio">$750.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="corridos">
+                            <img src="Img/Covers/PP2.jpg" alt="Éxodo - Peso Pluma">
+                            <h4>Éxodo - Peso Pluma</h4>
+                            <p class="genero">Corridos Tumbados</p>
+                            <div class="Costo">
+                                <span class="precio">$820.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/Tainy1.jpg" alt="Data - Tainy">
+                            <h4>DATA - Tainy</h4>
+                            <p class="genero">Reggaetón, Experimental</p>
+                            <div class="Costo">
+                                <span class="precio">$900.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/Humbe1.jpg" alt="Aurora - Humbe">
+                            <h4>Aurora - Humbe</h4>
+                            <p class="genero">Pop Alternativo</p>
+                            <div class="Costo">
+                                <span class="precio">$550.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/Humbe2.jpg" alt="Entropía - Humbe">
+                            <h4>Entropía - Humbe</h4>
+                            <p class="genero">Pop, R&B</p>
+                            <div class="Costo">
+                                <span class="precio">$600.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/Humbe3.jpg" alt="Armagedón - Humbe">
+                            <h4>Armagedón - Humbe</h4>
+                            <p class="genero">Pop Latino</p>
+                            <div class="Costo">
+                                <span class="precio">$580.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/Milo2.jpg" alt="111 - Milo J">
+                            <h4>111 - Milo J</h4>
+                            <p class="genero">Trap, Urbano</p>
+                            <div class="Costo">
+                                <span class="precio">$650.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="trap">
+                            <img src="Img/Covers/Milo1.jpg" alt="166 - Milo J">
+                            <h4>166 - Milo J</h4>
+                            <p class="genero">Trap Argentino</p>
+                            <div class="Costo">
+                                <span class="precio">$600.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="trap">
+                            <img src="Img/Covers/Milo3.jpg" alt="La vida era más corta - Milo J"> <h4>La vida era más corta - Milo J</h4>
+                            <p class="genero">Trap, Urbano</p>
+                            <div class="Costo">
+                                <span class="precio">$550.00</span> <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/Latin1.jpg" alt="Todos los días todo el día - Latin Mafia">
+                            <h4>Todos los días todo el día - Latin Mafia</h4>
+                            <p class="genero">Urbano, Alternativo</p>
+                            <div class="Costo">
+                                <span class="precio">$680.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/TWKN1.jpg" alt="After Hours - The Weeknd">
+                            <h4>After Hours - The Weeknd</h4>
+                            <p class="genero">R&B, Synth-Pop</p>
+                            <div class="Costo">
+                                <span class="precio">$850.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/TWKN2.jpg" alt="Dawn FM - The Weeknd">
+                            <h4>Dawn FM - The Weeknd</h4>
+                            <p class="genero">Dance Pop, Synth-Pop</p>
+                            <div class="Costo">
+                                <span class="precio">$790.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/TWKN3.jpg" alt="Hurry Up Tomorrow - The Weeknd">
+                            <h4>Hurry Up Tomorrow - The Weeknd</h4>
+                            <p class="genero">Pop, R&B (Pre-venta)</p>
+                            <div class="Costo">
+                                <span class="precio">$950.00</span> <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="Img/Covers/YE1.jpg" alt="MBDTF - Kanye West">
+                            <h4>My Beautiful Dark Twisted Fantasy</h4>
+                            <p class="genero">Hip Hop</p>
+                            <div class="Costo">
+                                <span class="precio">$1,200.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="Img/Covers/YE2.jpg" alt="Yeezus - Kanye West">
+                            <h4>Yeezus - Kanye West</h4>
+                            <p class="genero">Industrial Hip Hop</p>
+                            <div class="Costo">
+                                <span class="precio">$850.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="Img/Covers/YE3.jpg" alt="Graduation - Kanye West">
+                            <h4>Graduation - Kanye West</h4>
+                            <p class="genero">Hip Hop, Pop Rap</p>
+                            <div class="Costo">
+                                <span class="precio">$900.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="Img/Covers/YE4.jpg" alt="Ye - Kanye West">
+                            <h4>Ye - Kanye West</h4>
+                            <p class="genero">Hip Hop</p>
+                            <div class="Costo">
+                                <span class="precio">$600.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="Img/Covers/YE5.jpg" alt="The Life of Pablo - Kanye West">
+                            <h4>The Life of Pablo - Kanye West</h4>
+                            <p class="genero">Hip Hop, Gospel</p>
+                            <div class="Costo">
+                                <span class="precio">$950.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="Img/Covers/YE6.jpg" alt="Late Registration - Kanye West">
+                            <h4>Late Registration - Kanye West</h4>
+                            <p class="genero">Hip Hop</p>
+                            <div class="Costo">
+                                <span class="precio">$780.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="Img/Covers/YE7.jpg" alt="The College Dropout - Kanye West">
+                            <h4>The College Dropout - Kanye West</h4>
+                            <p class="genero">Hip Hop</p>
+                            <div class="Costo">
+                                <span class="precio">$800.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="Img/Covers/TY1.jpg" alt="Call Me If You Get Lost - Tyler">
+                            <h4>Call Me If You Get Lost - Tyler</h4>
+                            <p class="genero">Hip Hop</p>
+                            <div class="Costo">
+                                <span class="precio">$850.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="Img/Covers/TY2.jpg" alt="Chromakopia - Tyler">
+                            <h4>Chromakopia - Tyler, The Creator</h4>
+                            <p class="genero">Hip Hop (Nuevo)</p>
+                            <div class="Costo">
+                                <span class="precio">$980.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="Img/Covers/TY3.jpg" alt="Flower Boy - Tyler">
+                            <h4>Flower Boy - Tyler, The Creator</h4>
+                            <p class="genero">Hip Hop, Neo Soul</p>
+                            <div class="Costo">
+                                <span class="precio">$750.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="trap">
+                            <img src="Img/Covers/BADBO1.jpg" alt="Nadie Sabe Lo Que Va A Pasar Mañana">
+                            <h4>Nadie Sabe Lo Que Va A Pasar Mañana</h4>
+                            <p class="genero">Trap</p>
+                            <div class="Costo">
+                                <span class="precio">$1,100.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/BADBO2.jpg" alt="Un Verano Sin Ti - Bad Bunny">
+                            <h4>Un Verano Sin Ti - Bad Bunny</h4>
+                            <p class="genero">Urbano, Caribeño</p>
+                            <div class="Costo">
+                                <span class="precio">$1,450.00</span> <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/BADBO3.jpg" alt="YHLQMDLG - Bad Bunny">
+                            <h4>YHLQMDLG - Bad Bunny</h4>
+                            <p class="genero">Reggaetón, Urbano</p>
+                            <div class="Costo">
+                                <span class="precio">$950.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/BADBO4.jpg" alt="El Último Tour Del Mundo">
+                            <h4>El Último Tour Del Mundo</h4>
+                            <p class="genero">Trap, Rock Alternativo</p>
+                            <div class="Costo">
+                                <span class="precio">$900.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/BADBO5.jpg" alt="X100PRE - Bad Bunny">
+                            <h4>X100PRE - Bad Bunny</h4>
+                            <p class="genero">Urbano</p>
+                            <div class="Costo">
+                                <span class="precio">$850.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/RAUW1.jpg" alt="Cosa Nuestra - Rauw Alejandro">
+                            <h4>Cosa Nuestra - Rauw Alejandro</h4>
+                            <p class="genero">Urbano, Salsa Fusión</p>
+                            <div class="Costo">
+                                <span class="precio">$890.00</span> <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/RAUW2.jpg" alt="Saturno - Rauw Alejandro">
+                            <h4>Saturno - Rauw Alejandro</h4>
+                            <p class="genero">Synth-Pop, Urbano</p>
+                            <div class="Costo">
+                                <span class="precio">$750.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/RAUW3.jpg" alt="Afrodisíaco - Rauw Alejandro">
+                            <h4>Afrodisíaco - Rauw Alejandro</h4>
+                            <p class="genero">R&B, Reggaetón</p>
+                            <div class="Costo">
+                                <span class="precio">$700.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/RAUW4.jpg" alt="Vice Versa - Rauw Alejandro">
+                            <h4>Vice Versa - Rauw Alejandro</h4>
+                            <p class="genero">Pop Urbano</p>
+                            <div class="Costo">
+                                <span class="precio">$720.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="trap">
+                            <img src="Img/Covers/ELA1.jpg" alt="Sauce Boyz 2 - Eladio">
+                            <h4>Sauce Boyz 2 - Eladio Carrión</h4>
+                            <p class="genero">Trap</p>
+                            <div class="Costo">
+                                <span class="precio">$800.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="trap">
+                            <img src="Img/Covers/ELA2.jpg" alt="SEN2 KBRN - Eladio">
+                            <h4>SEN2 KBRN Vol. 1 - Eladio Carrión</h4>
+                            <p class="genero">Trap</p>
+                            <div class="Costo">
+                                <span class="precio">$750.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="trap">
+                            <img src="Img/Covers/ELA3.jpg" alt="3MEN2 KBRN - Eladio">
+                            <h4>3MEN2 KBRN - Eladio Carrión</h4>
+                            <p class="genero">Trap, Hip Hop</p>
+                            <div class="Costo">
+                                <span class="precio">$820.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/ALVA1.jpg" alt="Sayonara - Álvaro Díaz">
+                            <h4>Sayonara - Álvaro Díaz</h4>
+                            <p class="genero">Urbano, Emo Rap</p>
+                            <div class="Costo">
+                                <span class="precio">$780.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/ALVA2.jpg" alt="Felicilandia - Álvaro Díaz">
+                            <h4>Felicilandia - Álvaro Díaz</h4>
+                            <p class="genero">Urbano Alternativo</p>
+                            <div class="Costo">
+                                <span class="precio">$1,200.00</span> <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="hiphop">
+                            <img src="Img/Covers/ALVA3.jpg" alt="Díaz Antes - Álvaro Díaz">
+                            <h4>Díaz Antes - Álvaro Díaz</h4>
+                            <p class="genero">Hip Hop</p>
+                            <div class="Costo">
+                                <span class="precio">$650.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="urbano">
+                            <img src="Img/Covers/RELSB1.jpg" alt="A New Star (1993) - Rels B">
+                            <h4>A New Star (1993) - Rels B</h4>
+                            <p class="genero">Pop Urbano</p>
+                            <div class="Costo">
+                                <span class="precio">$700.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/BILLI1.jpg" alt="Hit Me Hard and Soft - Billie Eilish">
+                            <h4>Hit Me Hard and Soft - Billie Eilish</h4>
+                            <p class="genero">Pop Alternativo</p>
+                            <div class="Costo">
+                                <span class="precio">$950.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/BILLI2.jpg" alt="Happier Than Ever - Billie Eilish">
+                            <h4>Happier Than Ever - Billie Eilish</h4>
+                            <p class="genero">Pop, Downtempo</p>
+                            <div class="Costo">
+                                <span class="precio">$850.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/JOJI1.jpg" alt="Smithereens - Joji">
+                            <h4>Smithereens - Joji</h4>
+                            <p class="genero">Lo-Fi, R&B</p>
+                            <div class="Costo">
+                                <span class="precio">$700.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/JOJI2.jpg" alt="Nectar - Joji">
+                            <h4>Nectar - Joji</h4>
+                            <p class="genero">R&B Alternativo</p>
+                            <div class="Costo">
+                                <span class="precio">$890.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/JOJI3.jpg" alt="Ballads 1 - Joji">
+                            <h4>Ballads 1 - Joji</h4>
+                            <p class="genero">R&B, Trip Hop</p>
+                            <div class="Costo">
+                                <span class="precio">$1,100.00</span> <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/LANA1.jpg" alt="Born to Die - Lana Del Rey">
+                            <h4>Born to Die - Lana Del Rey</h4>
+                            <p class="genero">Indie Pop, Baroque Pop</p>
+                            <div class="Costo">
+                                <span class="precio">$650.00</span> <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/LANA2.jpg" alt="Ultraviolence - Lana Del Rey">
+                            <h4>Ultraviolence - Lana Del Rey</h4>
+                            <p class="genero">Dream Pop, Rock</p>
+                            <div class="Costo">
+                                <span class="precio">$750.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="card" data-category="pop">
+                            <img src="Img/Covers/LANA3.jpg" alt="Norman Fucking Rockwell! - Lana Del Rey">
+                            <h4>Norman Fucking Rockwell! - Lana Del Rey</h4>
+                            <p class="genero">Soft Rock, Pop</p>
+                            <div class="Costo">
+                                <span class="precio">$880.00</span>
+                                <button class="botonvinil">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+
+                    </div> </div> </section>
+    </main>
+
+    <footer>
+    <div class="footer-contenedor">
+        
+        <div class="footer-col">
+            <h3>Vinylex</h3>
+            <p>Sumergete en un mundo lleno de sensaciones. El mejor formato para disfrutar de tus éxitos favoritos.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Explora</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo Completo</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="registro.html">Únete al Club</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <a href="#">FB</a> 
+                <a href="#">IG</a>
+                <a href="#">TW</a>
+                <a href="#">YT</a>
+            </div>
+            <p style="margin-top: 20px;">info@vinylex.com</p>
+            <p>Puebla de Zaragoza, Universidad del Valle de Puebla</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Vinylex. Todos los derechos reservados.</p>
+        <p>Diseñado por <a href="autor.html" style="color: #ff6b6b;">Alexander</a></p>
+    </div>
+</footer>
+
+
+    <script>
+        // 1. ABRIR Y CERRAR SIDEBAR
+        const btnToggle = document.getElementById('btn-toggle-filtros');
+        const sidebar = document.getElementById('sidebar-filtros');
+
+        if(btnToggle){ // Verificamos que el botón exista para evitar errores
+            btnToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('abierto');
+            });
+        }
+
+        // 2. FILTRADO
+        const botones = document.querySelectorAll('.btn-filtro');
+        const productos = document.querySelectorAll('.card');
+
+        botones.forEach((boton) => {
+            boton.addEventListener('click', (e) => {
+                // Estilos de botones
+                botones.forEach(btn => btn.classList.remove('activo'));
+                e.target.classList.add('activo');
+
+                // Lógica de filtrado
+                const filtro = e.target.getAttribute('data-filter');
+
+                productos.forEach((producto) => {
+                    const categoria = producto.getAttribute('data-category');
+                    
+                    if (filtro === 'todos' || filtro === categoria) {
+                        producto.style.display = 'block';
+                        // Pequeña animación
+                        producto.style.opacity = '0';
+                        setTimeout(() => producto.style.opacity = '1', 100);
+                    } else {
+                        producto.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // --- LÓGICA DE ORDENAMIENTO ---
+    const selectOrden = document.getElementById('ordenar');
+    const contenedorProductos = document.querySelector('.cuadricula');
+
+    selectOrden.addEventListener('change', () => {
+        const criterio = selectOrden.value;
+        
+        // 1. Convertimos la lista de nodos (divs) en un Array real para poder ordenarlo
+        // Nota: Usamos 'Array.from' para poder usar el método .sort()
+        const tarjetasArray = Array.from(document.querySelectorAll('.card'));
+
+        // 2. Función de ordenamiento
+        tarjetasArray.sort((a, b) => {
+            
+            // Extraemos el Título (h4) y el Precio de cada tarjeta (A y B)
+            const tituloA = a.querySelector('h4').innerText.toLowerCase();
+            const tituloB = b.querySelector('h4').innerText.toLowerCase();
+            
+            // Extraemos el precio: Quitamos el signo '$' y lo convertimos a número
+            const precioA = parseFloat(a.querySelector('.precio').innerText.replace('$', ''));
+            const precioB = parseFloat(b.querySelector('.precio').innerText.replace('$', ''));
+
+            // 3. Comparaciones según lo que elija el usuario
+            if (criterio === 'az') {
+                return tituloA.localeCompare(tituloB); // Ordena alfabéticamente
+            } else if (criterio === 'za') {
+                return tituloB.localeCompare(tituloA); // Ordena al revés
+            } else if (criterio === 'precio-bajo') {
+                return precioA - precioB; // Menor a mayor
+            } else if (criterio === 'precio-alto') {
+                return precioB - precioA; // Mayor a menor
+            } else {
+                return 0; // Si es "defecto", no hace nada (o podrías definir un orden por ID)
+            }
+        });
+
+        // 4. Volvemos a pegar las tarjetas en el contenedor (esto las reordena visualmente)
+        tarjetasArray.forEach(card => {
+            contenedorProductos.appendChild(card);
+        });
+    });
+    </script>
+</body>
+</html>

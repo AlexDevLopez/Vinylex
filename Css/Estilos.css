@@ -24,6 +24,7 @@ body{
     line-height: 1.6;
     
 }
+/* Header y Nav*/
 header{
     background-color: #000000;
     padding: 15px 50px;
@@ -63,12 +64,14 @@ nav a{
 nav a:hover{
     color: #ff6b6b;
 }
+/* FIN H Y N */
 
+/* Secciones y Main*/
 section, main{
     padding: 80px 20px 40px 20px;
     text-align: center;
 }
-
+/* Estilos Específicos de HOME*/
 .Home{
     height: 100vh;
     background: url(/Img/Imagen-Vinilo.jpg);
@@ -97,7 +100,7 @@ section, main{
     font-size: 1.8rem;
     margin-bottom: 20px;
 }
-
+/* FORMULARIO REGISTRO*/
 #Registro{
     background-color: #1a1a1a;
 }
@@ -171,7 +174,7 @@ input:focus, select:focus{
     color: #000;
     box-shadow: 0 0 5px #ff6b6b, 0 0 5px #ff6b6b;
 }
-
+/* Productos*/
 #productos h3{
     color: #ff6b6b;
     font-family: "Fleur De Leah", cursive;
@@ -190,10 +193,11 @@ input:focus, select:focus{
 }
 
 .cuadricula{
+    flex: 1;
     display: grid;
     padding: 20px 0;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .card{
@@ -203,6 +207,7 @@ input:focus, select:focus{
     padding: 15px;
     transition: tranform 0.5 ease;
     text-align: center;
+    color: white;
 }
 
 .card:hover{
@@ -212,7 +217,7 @@ input:focus, select:focus{
 
 .card img{
     width: 100%;
-    height: 350px;
+    height: 300px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -221,6 +226,7 @@ input:focus, select:focus{
 .card h4{
     font-size: 1.2Rem;
     margin-bottom: 5px;
+    min-height: 2rem;
 }
 
 .genero{
@@ -287,4 +293,644 @@ input:focus, select:focus{
     color: #000;
     font-size: large;
 
+}
+
+/* --- LAYOUT DE TIENDA CORREGIDO --- */
+
+/* 1. El Contenedor Padre (Obliga a estar lado a lado) */
+.tienda-layout {
+    display: flex;             /* Activa el modo fila */
+    align-items: flex-start;   /* Alinea todo arriba */
+    gap: 30px;                 /* Espacio entre barra y productos */
+    max-width: 95%;
+    margin: 0 auto;            /* Centra todo en la pantalla */
+    padding: 0 20px;
+    max-width: 1800px;
+}
+
+/* Columna Izquierda (Filtros) */
+.columna-filtros {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el botón y la barra a la izquierda */
+}
+
+/* 2. El Botón de Filtros (Ahora alineado a la izquierda) */
+.btn-toggle {
+    display: inline-block;
+    margin: 20px 0 20px 0; /* Espacio arriba y abajo */
+    background-color: transparent;
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.btn-toggle:hover {
+    background-color: #ff6b6b;
+    color: black;
+}
+
+/* 3. La Barra Lateral (Sidebar) */
+.sidebar {
+    width: 220px;           /* Oculta por defecto */
+    opacity: 0;         /* Invisible */
+    overflow: hidden;   
+    transition: all 0.5s ease; /* Animación suave */
+    background: transparent;   /* Sin fondo feo */
+}
+
+/* Estado ABIERTO del sidebar */
+.sidebar.abierto {
+    width: 250px;       /* Ancho fijo */
+    opacity: 1;         /* Visible */
+    min-width: 250px;   /* Evita que se aplaste */
+    border-right: 1px solid #333;
+    padding-right: 20px;
+}
+
+/* 4. Estilo de los BOTONES DEL MENÚ (Adiós cajas blancas) */
+.sidebar-contenido button.btn-filtro {
+    display: block;        /* Ocupa toda la línea */
+    width: 100%;           
+    padding: 12px;
+    margin-bottom: 8px;
+    background-color: #111; /* NEGRO (No blanco) */
+    color: #fff;            /* Texto blanco */
+    border: 1px solid #333; /* Borde sutil */
+    text-align: left;       
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar-contenido button.btn-filtro:hover,
+.sidebar-contenido button.btn-filtro.activo {
+    background-color: #ff6b6b; /* Rojo al pasar mouse */
+    color: black;
+    border-color: #ff6b6b;
+    padding-left: 20px;     /* Efecto de movimiento */
+}
+
+/* 5. Títulos del sidebar */
+.sidebar h4 {
+    color: #ff6b6b;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ESTILOS DEL SELECTOR DE ORDEN */
+.orden-container {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.select-orden {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: white;              /* Texto blanco */
+    border: 1px solid #ff6b6b; /* Borde neón */
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.select-orden option {
+    background-color: #1a1a1a;
+}
+
+/* --- ESTILOS DEL CARRUSEL (SWIPER) --- */
+.swiper {
+    width: 90%;  
+    margin: 0 auto;        /* Que ocupe casi todo el ancho */
+    height: 450px;       /* Altura fija del carrusel */
+    border-radius: 15px; /* Bordes redondeados */
+    border: 2px solid #333;
+    max-width: 1200px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #000;
+    display: flex;       /* Para centrar contenido */
+    justify-content: center;
+    align-items: center;
+    position: relative;  /* Para poner texto encima */
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Que la imagen cubra todo sin deformarse */
+    opacity: 0.6; 
+    opacity: 0.5;
+    z-index: 1;      /* Un poco oscura para leer el texto */
+}
+
+/* Texto flotante encima de la imagen */
+.slide-content {
+    position: relative;
+    z-index: 100;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+    padding: 20px;
+}
+
+.slide-content h2 {
+    font-family: "Fleur De Leah", cursive;
+    font-size: 5rem;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.slide-content p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #444;
+    font-family: "Fleur De Leah", cursive;
+}
+
+/* Color de las flechas del slider */
+.swiper-button-next, .swiper-button-prev {
+    color: #ff6b6b !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #ff6b6b !important;
+}
+
+/*Novedades*/
+#Vendido{
+    scroll-margin-top: 80px;
+    min-height: calc(80vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+/* --- ESTILOS DE LA GALERÍA (MOSAICO) --- */
+.galeria-grid {
+    display: grid;
+    /* Crea columnas automáticas de mínimo 250px */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Altura automática de filas para el efecto mosaico */
+    grid-auto-rows: 250px; 
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.foto-item {
+    position: relative; /* Para el texto flotante */
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Llena el cuadro sin deformarse */
+    transition: transform 0.5s ease;
+}
+
+/* Efecto al pasar el mouse (Zoom) */
+.foto-item:hover img {
+    transform: scale(1.1);
+}
+
+/* --- CLASES ESPECIALES PARA TAMAÑOS --- */
+
+/* Ocupa 2 espacios hacia abajo (Foto alta) */
+.vertical {
+    grid-row: span 2; 
+}
+
+/* Ocupa 2 espacios hacia los lados (Foto ancha) */
+.horizontal {
+    grid-column: span 2; 
+}
+
+/* --- TEXTO QUE APARECE AL PASAR EL MOUSE --- */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fondo negro transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Invisible al inicio */
+    transition: opacity 0.3s ease;
+}
+
+.foto-item:hover .overlay {
+    opacity: 1; /* Visible al pasar el mouse */
+}
+
+.overlay p {
+    color: #ff6b6b;
+    font-family: "Fleur De Leah", cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Ajuste Responsivo para celulares: Todo en 1 columna */
+@media (max-width: 600px) {
+    .horizontal {
+        grid-column: span 1; /* En celular, que no ocupe 2 espacios */
+    }
+}
+
+#galeria{
+    scroll-margin-top: 80px;
+    min-height: calc(80vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+/* --- FOOTER PROFESIONAL --- */
+footer {
+    background-color: #050505; /* Casi negro absoluto */
+    color: #fff;
+    padding: 60px 20px 20px; /* Espacio arriba y abajo */
+    border-top: 4px solid #ff6b6b; /* Borde neón arriba */
+    margin-top: auto; /* Empuja el footer al fondo si hay poco contenido */
+}
+
+.footer-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* 3 Columnas que se ajustan solas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    font-family: "Fleur De Leah", cursive;
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ccc;
+}
+
+.footer-col p {
+    color: #888;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff6b6b;
+    padding-left: 5px; /* Pequeño movimiento al pasar el mouse */
+}
+
+/* Redes Sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    line-height: 40px; /* Centra verticalmente */
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+
+.social-icons a:hover {
+    background-color: #ff6b6b;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* --- ESTILOS DEL CARRITO --- */
+.carrito-contenedor {
+    display: flex;
+    flex-wrap: wrap; /* Para que en celular baje */
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Lista de productos (Izquierda) */
+.carrito-lista {
+    flex: 2; /* Ocupa el 66% del ancho */
+    background: transparent;
+}
+
+.item-carrito {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1a1a1a; /* Fondo tarjeta */
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.item-carrito img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.item-info {
+    flex: 1; /* Empuja el botón eliminar a la derecha */
+}
+
+.item-info h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.precio-item {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-top: 5px;
+}
+
+/* Botón Eliminar */
+.btn-eliminar {
+    background: transparent;
+    border: 1px solid #ff4c4c;
+    color: #ff4c4c;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-eliminar:hover {
+    background: #ff4c4c;
+    color: white;
+}
+
+/* Resumen (Derecha) */
+.carrito-resumen {
+    flex: 1; /* Ocupa el 33% del ancho */
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #ff6b6b; /* Borde neón para resaltar */
+    height: fit-content; /* Se ajusta al contenido */
+}
+
+.resumen-fila {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.total {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+/* Botón Seguir Comprando */
+.boton-seguir {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: #888;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.boton-seguir:hover {
+    color: white;
+}
+
+/* --- ESTILOS DE CONTACTO --- */
+.contacto-layout {
+    display: flex;
+    flex-wrap: wrap; /* Para que en celular se ponga uno abajo del otro */
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Columna Izquierda y Derecha ocupan 50% cada una */
+.contacto-form, .contacto-info {
+    flex: 1;
+    min-width: 300px; /* Evita que se aplasten mucho */
+}
+
+/* Estilo para el área de texto (Mensaje) */
+textarea {
+    width: 100%;
+    padding: 10px;
+    background: #000;
+    border: 2px solid #444;
+    color: #fff;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit; /* Usa la misma fuente que el resto */
+    resize: vertical; /* Permite estirar solo hacia abajo */
+}
+
+textarea:focus {
+    border-color: #ff6b6b;
+}
+
+/* Estilos de la info de la derecha */
+.info-item {
+    margin-bottom: 30px;
+    border-left: 3px solid #ff6b6b; /* Línea decorativa al lado */
+    padding-left: 15px;
+}
+
+.info-item h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: #aaa;
+}
+
+/* Mapa */
+.mapa-container {
+    border: 2px solid #333;
+    border-radius: 10px;
+    overflow: hidden; /* Recorta las esquinas del mapa */
+    margin-top: 20px;
+    filter: grayscale(100%) invert(90%); /* TRUCO PRO: Hace el mapa oscuro */
+}
+
+/* Al pasar el mouse, el mapa recupera su color */
+.mapa-container:hover {
+    filter: none;
+    transition: 0.5s;
+}
+
+/* --- ESTILOS PÁGINA DE AUTOR --- */
+.autor-card {
+    background-color: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 800px;
+    width: 90%;
+    display: flex; /* Foto a la izquierda, texto a la derecha */
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.autor-foto img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; /* Foto redonda */
+    border: 4px solid #ff6b6b; /* Borde neón */
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+}
+
+.autor-info {
+    flex: 1;
+    text-align: left;
+}
+
+.titulo-autor {
+    font-family: "Fleur De Leah", cursive;
+    font-size: 3.5rem;
+    color: #ff6b6b;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.rol {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.datos-escolares {
+    background: #000;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 3px solid #ff6b6b;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+.descripcion-autor {
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.social-autor a {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.social-autor a:hover {
+    background: #ff6b6b;
+    color: #000;
+}
+
+/* Responsivo para celular: Foto arriba, texto abajo */
+@media (max-width: 768px) {
+    .autor-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .autor-info {
+        text-align: center;
+    }
+
+    .datos-escolares {
+        text-align: left; /* Los datos se ven mejor alineados a la izq */
+    }
 }

@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VinyLex</title>
     <link rel="stylesheet" href="Css/Estilos.css">
-    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <header id="Inicio">
         <nav>
             <h2>Vinylex</h2>
             <ul>
-                <li><a href="#Inicio">Inicio</a></li>
-                <li><a href="#Ofertas">Ofertas</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#Vendido">Hot sale</a></li>
                 <li><a href="Productos.html">Productos</a></li>
-                <li><a href="#Servicios">Servicios</a></li>
-                <li><a href="#Galeria">Galería</a></li>
-                <li><a href="#Registro">Registro</a></li>
-                <li><a href="#Contacto">Contacto</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
             </ul>
         </nav>
     </header>
@@ -29,10 +29,75 @@
     </section>
 
     <main>
-        <section id="Ofertas">
-            <h3>Ofertas Semanales</h3>
-            <div class="Carrusel-contenedor">
-                <p>[Espacio para Carrusel]</p>
+        <section id="Vendido" style="padding-top: 50px;">
+            <h3 style="text-align: center; font-size: 5rem; font-family: 'Fleur De Leah', cursive; color: #ff6b6b; margin-bottom: 20px;">
+                Más vendidos
+            </h3>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                        <img src="Img/Covers/Humbe1.jpg" alt="Nov1">
+                        <div class="slide-content">
+                            <h2>Aurora</h2>
+                            <p>Humbe</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Img/Covers/Tainy1.jpg" alt="Nov2">
+                        <div class="slide-content">
+                            <h2>Data</h2>
+                            <p>Tainy</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Img/Covers/Milo1.jpg" alt="Nov3">
+                        <div class="slide-content">
+                            <h2>166</h2>
+                            <p>Milo j</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Img/Covers/Humbe3.jpg" alt="Nov4">
+                        <div class="slide-content">
+                            <h2>Armagedon</h2>
+                            <p>Humbe</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Img/Covers/Latin1.jpg" alt="Nov5">
+                        <div class="slide-content">
+                            <h2>Todos los dias todo el día</h2>
+                            <p>Latin Mafia</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Img/Covers/Humbe2.jpg" alt="Nov6">
+                        <div class="slide-content">
+                            <h2>Entropía</h2>
+                            <p>Humbe</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Img/Covers/Milo3.jpg" alt="Nov7">
+                        <div class="slide-content">
+                            <h2>La vida era más corta</h2>
+                            <p>Milo j</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Img/Covers/KevinKaarl1.jpg" alt="Nov8">
+                        <div class="slide-content">
+                            <h2>Hasta el fin del mundo</h2>
+                            <p>Kevin Kaarl</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -122,6 +187,7 @@
                     </div>
                 </div>
                 
+                
             </div>
             
             <div class="btpag">
@@ -130,53 +196,64 @@
             </a>    
             </div>
             </section>
+      </main>
 
-        <aside id="Servicios">
-            <h3>Servicios Especiales</h3>
-            <p>Restauración de discos y búsquedas personalizadas.</p>
-        </aside>
+<footer>
+    <div class="footer-contenedor">
+        
+        <div class="footer-col">
+            <h3>Vinylex</h3>
+            <p>Sumergete en un mundo lleno de sensaciones. El mejor formato para disfrutar de tus éxitos favoritos.</p>
+        </div>
 
-        <section id="Galeria">
-            <h3>Galería</h3>
-            </section>
+        <div class="footer-col">
+            <h4>Explora</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo Completo</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="registro.html">Únete al Club</a></li>
+            </ul>
+        </div>
 
-        <section id="Registro">
-            <h3>Regístrate en nuestro Club</h3>
-            <form class="formulario ">
-                <p>Recibe anuncios y noticias de lanzamientos exclusivos</p>
-                <div class="campo">
-                    <label for="nombre">Nombre: </label>
-                    <input type="text" id="nombre" placeholder="Tu nombre aquí" required>
-                </div>
-                <div class="campo">
-                    <label for="email">Correo Electrónico: </label>
-                    <input type="email" id="email" placeholder="example@gmail.com" required>
-                </div>
-                <div class="campo">
-                    <label for="genero">Género favorito: </label>
-                    <select id="genero">
-                        <option value="Pop">Pop</option>
-                        <option value="Hip Hop">Hip Hop</option>
-                        <option value="Rap">Rap</option>
-                        <option value="Regional">Regional Méxicano</option>
-                        <option value="Rock">Rock Clásicos</option>
-                        <option value="Jazz">Jazz</option>
-                        <option value="Metal">Metal</option>
-                        <option value="Psicodelico">Psicodelico</option>
-                        <option value="Otro">Otro género</option>
-                    </select>
-                </div>
-                <a href="Gracias.html">
-                    <button type="submit" class="boton">Registrarme</button>
-                </a>
-            </form>
-        </section>
-    </main>
+        <div class="footer-col">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <a href="#">FB</a> 
+                <a href="#">IG</a>
+                <a href="#">TW</a>
+                <a href="#">YT</a>
+            </div>
+            <p style="margin-top: 20px;">info@vinylex.com</p>
+            <p>Puebla de Zaragoza, Universidad del Valle de Puebla</p>
+        </div>
+    </div>
 
-    <footer id="Contacto">
-        <h3>Contáctanos</h3>
-        <p>Email: alexanderaguirre270@gmail.com</p>
-        <p>Desarrollado por: <a href="autor.hmtl" target="_blank">Ver información del Autor</a></p>
-    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Vinylex. Todos los derechos reservados.</p>
+        <p>Diseñado por <a href="autor.html" style="color: #ff6b6b;">Alexander</a></p>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3500,        /* Cambia cada 3.5 segundos */
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true, /* Hace que gire infinitamente */
+    });
+</script>
 </body>
 </html>
